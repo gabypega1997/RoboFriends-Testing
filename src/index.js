@@ -5,10 +5,10 @@ import { createStore,applyMiddleware, combineReducers } from 'redux';
 import thunkMiddleware  from 'redux-thunk';
 import './index.css';
 import App from './containers/App';
+import { searchRobots, requestRobots } from './reducer';
 
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import 'tachyons'; 
-import { searchRobots , requestRobots} from './reducer';
 
 const rootReducer = combineReducers({searchRobots, requestRobots})
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware))
