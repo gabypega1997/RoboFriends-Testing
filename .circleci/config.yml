@@ -1,0 +1,20 @@
+version: 2
+jobs: 
+  raul:
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - run: echo "A first hello"
+  gabi : 
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - run: echo "Double trouble"
+workflows:
+  version: 2
+  raul-gabi:
+    jobs:
+      - raul
+      - gabi 
