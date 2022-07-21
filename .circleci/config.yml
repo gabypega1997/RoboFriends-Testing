@@ -1,6 +1,6 @@
 version: 2
 jobs: 
-  raul:
+  build:
     docker:
       - image: circleci/node:latest
     steps:
@@ -8,15 +8,27 @@ jobs:
       - run: echo "npm installing"
       - run: npm install
       - run: CI=true npm run build
-  gabi : 
+  test : 
     docker:
       - image: circleci/node:latest
     steps:
       - checkout
-      - run: echo "Double trouble"
+      - run: echo "testing stuff"
+      - run: npm install
+      - run: npm run test
+  hithere:
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - run: echo "heloooo!" 
+          
 workflows:
   version: 2
-  raul-gabi:
+  build_test_and_lint:
     jobs:
-      - raul
-      - gabi 
+      - build
+      - hithere
+      - test:
+          requires:
+            - hithere
