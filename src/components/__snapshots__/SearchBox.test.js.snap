@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render SearchBox Component SearchBox schnapshot 1`] = `
+<div
+  className="pa2"
+>
+  <div
+    className="ma3 pa2"
+  >
+    <CounterButton
+      className="tc"
+    />
+  </div>
+  <input
+    aria-label="Search Robots"
+    className="pa3 ba b--green bg-lightest-blue"
+    onChange={[MockFunction]}
+    placeholder="search robots"
+    type="search"
+  />
+</div>
+`;
