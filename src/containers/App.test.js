@@ -33,9 +33,9 @@ describe("My Conection React-Redux", () => {
     );
   });
 
-  // it("connection to App container", () => {
-  //     expect (component.toJSON()).toMatchSnapshot();
-  // })
+  it("connection to App container", () => {
+    expect(component.toJSON()).toMatchSnapshot();
+  });
 });
 
 // //Andrei Solution

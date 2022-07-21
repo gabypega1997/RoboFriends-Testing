@@ -10,7 +10,7 @@ describe("Render SearchBox Component", () => {
   };
   wrapper = shallow(<SearchBox {...mockFunktions} />);
 
-  // it('SearchBox schnapshot',()=>{
-  //     expect(wrapper).toMatchSnapshot();
-  // })
+  it("SearchBox schnapshot", () => {
+    expect(wrapper).toMatchSnapshot();
+  });
 });

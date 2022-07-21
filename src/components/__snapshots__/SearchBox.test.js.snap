@@ -7,7 +7,7 @@ exports[`Render SearchBox Component SearchBox schnapshot 1`] = `
   <div
     className="ma3 pa2"
   >
-    <CounterButton
+    <CounterButton2
       className="tc"
     />
   </div>
